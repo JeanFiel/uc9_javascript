@@ -1,0 +1,34 @@
+<script>
+let posicao = 6
+let chao = "_"
+let personagem = "✮"
+let tamanhomundo = 100
+let posmoeda = 10
+let moedas = 0
+
+document.addEventListener("keyup", (e)=>{
+    if(e.key =="ArrowRight"){
+        posicao++
+    }else if(e.key == "ArrowLeft"){
+        posicao--
+    }
+    console.clear()
+    desenhar()
+
+})
+
+function desenhar(){
+    let mapa = ""
+    for(let i = 0; i < tamanhomundo; i++){
+        if( i == posicao ){
+            mapa += personagem
+        }
+        else{
+            mapa += chao
+    }
+    console.log(mapa)
+}
+
+      
+}
+</script>
